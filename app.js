@@ -68,11 +68,120 @@ function page2Animation(){
         scrollTrigger:{
             trigger:"#page2",
             scroller:"#main",
-            start:"top 47%",
-            end:"top 46%",
-            markers: true,
+            start:"top 40%",
+            end:"top 37%",
+            // markers: true,
             scrub:2
         }
     })
 }
 page2Animation()
+
+function page3Animation(){
+  gsap.from("#page3-top ", {
+      y:120,
+      stagger:0.2,
+      duration:1,
+      scrollTrigger:{
+          trigger:"#page3",
+          scroller:"#main",
+          start:"top 40%",
+          end:"top 37%",
+          // markers: true,
+          scrub:2
+      }
+  })
+}
+page3Animation()
+
+
+function page4Animation(){
+  gsap.from(".element h1", {
+      y:120,
+      stagger:0.2,
+      duration:1,
+      scrollTrigger:{
+          trigger:"#page4",
+          scroller:"#main",
+          start:"top 40%",
+          end:"top 37%",
+          // markers: true,
+          scrub:2
+      }
+  })
+}
+page4Animation()
+
+function page6Animation(){
+  gsap.from(".words h1", {
+      y:120,
+      stagger:0.2,
+      duration:1,
+      scrollTrigger:{
+          trigger:"#page6",
+          scroller:"#main",
+          start:"top 40%",
+          end:"top 37%",
+          // markers: true,
+          scrub:2
+      }
+  })
+}
+page6Animation()
+
+function page8Animation(){
+  gsap.from(".about h1", {
+      y:120,
+      stagger:0.2,
+      duration:1,
+      scrollTrigger:{
+          trigger:"#page8",
+          scroller:"#main",
+          start:"top 40%",
+          end:"top 37%",
+          // markers: true,
+          scrub:2
+      }
+  })
+}
+page8Animation()
+
+function swiper(){
+  var swiper = new Swiper(".mySwiper", {
+    slidesPerView: 1,
+    spaceBetween: 30,
+    loop: true,
+    autoplay: {
+      delay: 2500,
+      disableOnInteraction: true,
+    },
+  });
+}
+swiper()
+
+var t1 = gsap.timeline()
+t1.from("#loader h3", {
+  x:40,
+  opacity: 0,
+  duration: 1,
+  stagger:0.1
+})
+t1.to("#loader h3",{
+  opacity: 0,
+  x:-40,
+  duration: 1,
+  stagger: 0.1
+})
+t1.to("#loader",{
+  opacity: 0
+})
+t1.to("#loader",{
+  display: "none"
+})
+
+t1.from("#page1-content h1 span",{
+  y:100,
+  opacity:0,
+  stagger:0.2,
+  duration:0.5
+})
